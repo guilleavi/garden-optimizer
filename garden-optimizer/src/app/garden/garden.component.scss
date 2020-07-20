@@ -1,0 +1,98 @@
+@import "../../styles/variables";
+
+mat-sidenav-content {
+	height: 1000px; // remove this
+}
+
+.mat-list-base {
+	padding-top: 0px;
+}
+
+.mat-drawer-side {
+	border: 0px;
+}
+
+a.logo-component {
+	height: 78px !important;
+	background-color: $blue200;
+	&:hover {
+		background-color: $blue200;
+	}
+	mat-icon {
+		color: $light-transparent-white;
+	}
+	.logo-text {
+		color: $dark-transparent-white;
+		font-size: 20px;
+	}
+}
+
+a.menu-item {
+	mat-icon {
+		color: lightskyblue;
+	}
+
+	.menu-item-text {
+		color: gray;
+		font-size: 15px;
+	}
+}
+
+#page-nav {
+	background: linear-gradient(90deg, $blue300 0%, $green300 90%);
+	height: 78px;
+	::ng-deep .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text {
+		padding-left: 4px !important;
+	}
+	.navbar-component {
+		a {
+			&:hover,
+			&:focus,
+			&:active {
+				background: linear-gradient(90deg, $blue300 0%, $green300 90%);
+			}
+			.user-icon {
+				color: white;
+				padding-top: 19px;
+			}
+
+			.user-data {
+				font-size: 16px;
+				color: white;
+				padding-top: 24px;
+			}
+		}
+	}
+}
+
+.menu-item:hover {
+	.menu-icon {
+		animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+		transform: translate3d(0, 0, 0);
+		backface-visibility: hidden;
+		perspective: 1000px;
+	}
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}

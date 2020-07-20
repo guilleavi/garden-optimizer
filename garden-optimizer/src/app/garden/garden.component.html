@@ -1,0 +1,45 @@
+<mat-sidenav-container>
+    <mat-sidenav #appDrawer
+                 mode="rail"
+                 opened="true"
+                 (openedChange)="openedChange(appDrawer.opened)">
+        <mat-nav-list class="dashboard">
+            <a mat-list-item
+               class="logo-component">
+                <mat-icon mat-list-icon
+                          class="app-icon"
+                          (click)="appDrawer.toggle()">menu</mat-icon>
+                <span matLine
+                      class="logo-text">Garden Optimizr</span>
+            </a>
+            <a mat-list-item
+               class="menu-item"
+               (click)="goTo('veggies')">
+                <mat-icon mat-list-icon
+                          class="menu-icon">start_rate</mat-icon>
+                <p matLine
+                   class="menu-item-text">Veggies Manager</p>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="row">
+            <div id="page-nav"
+                 class="col-12">
+                <mat-nav-list class="navbar-component">
+                    <a mat-list-item>
+                        <mat-icon mat-list-icon
+                                  class="user-icon">pets</mat-icon>
+                        <span matLine
+                              class="user-data">Guillermina Avigliano</span>
+                    </a>
+                </mat-nav-list>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
